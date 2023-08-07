@@ -1,0 +1,39 @@
+.container{
+    display: flex;    
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--slateGray);
+    
+    .apresentation{        
+        width: 80vw;
+        height: 60vh;
+        border-style: solid;
+        border-width: 0.2vw;
+    }
+
+    .specialties{
+        width: 80vw;
+        height: 40vh;
+        margin-top: 5vh;
+        border-style: solid;
+        border-width: 0.2vw;
+    }
+
+    .projects{
+        width: 80vw;
+        height: 40vh;
+        margin-top: 5vh;
+        border-style: solid;
+        border-width: 0.2vw;
+    }
+
+    .contact{
+        width: 100%;
+        height: 50vh;
+        margin-top: 5vh;
+        border-style: solid;
+        border-width: 0.2vw;
+        background-color: var(--lightSteelBlue);
+    }
+
+}

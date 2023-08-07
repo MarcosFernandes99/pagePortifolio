@@ -1,7 +1,20 @@
-import "./style.sass"
+import "./style.scss"
 
 export const Home = () => {
   return (
-    <div>OOOOOI</div>
+    <main className="container">
+        <section className="apresentation">
+            
+        </section>
+        <section className="specialties">
+
+        </section>
+        <section className="projects">
+
+        </section>
+        <section className="contact">
+
+        </section>
+    </main>
   )
 }
