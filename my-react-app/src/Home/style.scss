@@ -69,11 +69,33 @@
     }
 
     .specialties {
-        width: 80vw;
+        display: flex;
+        width: 75vw;
         height: 40vh;
         margin-top: 5vh;
         border-top: solid;
         border-width: 0.1vw;
+
+        .sectionSpecialties{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 30px;
+
+            .specialtie{
+                display: flex;
+                flex-direction: column;
+                width: 25vw;
+                align-items: center;
+                font-weight: 800;
+
+                p{
+                    font-size: 20px;
+                    font-weight: 50;
+                }
+            }
+
+        }
     }
 
     .projects {

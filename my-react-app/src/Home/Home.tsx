@@ -32,15 +32,14 @@ export const Home = () => {
       </section>
 
       <section className="specialties">
-        <div>
-          <span>HTML</span>
-          <span>Javascript</span>
-          <span>CSS</span>
-          <span>React</span>
-          <span>Sass</span>
-          <span>API</span>
+        <div className="sectionSpecialties">
+          <span className="specialtie">HTML <p>1 ano de experiência</p></span>
+          <span className="specialtie">Javascript <p>1 ano de experiência</p></span>
+          <span className="specialtie">CSS <p>1 ano de experiência</p></span>
+          <span className="specialtie">React <p>1 ano de experiência</p></span>
+          <span className="specialtie">Sass <p>1 ano de experiência</p></span>
+          <span className="specialtie">API <p>1 ano de experiência</p></span>
         </div>
-
       </section>
 
       <section className="projects">
