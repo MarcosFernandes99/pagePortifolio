@@ -47,6 +47,22 @@ export const Home = () => {
       </section>
 
       <section className="contact">
+        <div className="sectionContact">Contato <p>Eu adoraria ouvir sobre seu projeto e como eu poderia ajudar.
+          Por favor preencha o formulário, e eu entro em contato o mais breve possível</p>
+        </div>
+        <div className="sectionForm">
+          <form className="form" action="Submit">
+            <input type="text" placeholder="Nome"/>
+            <input type="text" placeholder="Email"/>
+            <textarea className="msg" placeholder="Mensagem"/>
+            <button className="submitBtn" type="submit">ENVIAR MENSAGEM</button>
+          </form>
+
+        </div>
+        <div className="socialMedia">
+          <span>marcos.jr23</span>
+          <span className="icon">AAAA</span>
+        </div>
 
       </section>
     </main>
