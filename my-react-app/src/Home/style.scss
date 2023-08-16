@@ -1,17 +1,82 @@
-.container{
-    display: flex;    
+.container {
+    display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     background-color: var(--slateGray);
-    
-    .apresentation{        
+
+    .apresentation {
+        display: flex;
         width: 80vw;
         height: 60vh;
         border-style: solid;
         border-width: 0.2vw;
+
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 75%;
+
+            .title,
+            .headline {
+                margin-bottom: 1rem;
+
+                button {
+                    background-color: var(--slateGray);
+                    border-bottom: 0.3vh solid black;
+                }
+            }
+        }
+
+        .photo {
+            position: relative;
+            display: flex;            
+            align-items: center;
+            width: 35%;
+            height: 100%;
+
+            .myPhoto {
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: 5vh;
+            }
+
+            .socialIcons {
+                position: absolute;
+                top: 0;                        
+                display: flex;                 
+                
+                .iconLinkG{                                
+                    text-decoration: none;
+                    color: inherit;                    
+                    
+                    .icon {
+                        width: 20%;                        
+                    }
+                }
+
+                .iconLinkL{
+                    text-decoration: none;
+                    color: inherit;
+                    
+                    .icon {
+                        width: 20%;                        
+                    }
+                }
+            }
+        }
     }
 
-    .specialties{
+    .specialties {
+        width: 80vw;
+        height: 40vh;
+        margin-top: 5vh;
+        border-top: solid;
+        border-width: 0.1vw;
+    }
+
+    .projects {
         width: 80vw;
         height: 40vh;
         margin-top: 5vh;
@@ -19,15 +84,7 @@
         border-width: 0.2vw;
     }
 
-    .projects{
-        width: 80vw;
-        height: 40vh;
-        margin-top: 5vh;
-        border-style: solid;
-        border-width: 0.2vw;
-    }
-
-    .contact{
+    .contact {
         width: 100%;
         height: 50vh;
         margin-top: 5vh;
