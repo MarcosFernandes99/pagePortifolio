@@ -1,7 +1,6 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background-color: var(--slateGray);
 
@@ -9,61 +8,65 @@
         display: flex;
         width: 80vw;
         height: 60vh;
-        border-style: solid;
-        border-width: 0.2vw;
 
         .text {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            width: 75%;
+            width: 50%;
+            
+            .title{
+                font-size: 50px;
+                font-weight: 700;
+            }
 
-            .title,
-            .headline {
-                margin-bottom: 1rem;
-
+            .headline{
+                margin-top: 5vh;
+                font-size: 20px;
+                font-weight: 300;
+                text-align: justify;
+                line-height: 3vh;
+                
                 button {
+                    margin-top: 5vh;
                     background-color: var(--slateGray);
                     border-bottom: 0.3vh solid black;
+                    font-size: 15px;
+                    font-weight: 700;
+                    cursor: pointer;
                 }
-            }
+            }              
         }
 
         .photo {
             position: relative;
             display: flex;
-            align-items: center;
-            width: 35%;
-            height: 100%;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 50%;
 
-            .myPhoto {
-                max-width: 100%;
-                max-height: 100%;
-                border-radius: 5vh;
+            .myPhoto {                
+                border-radius: 2vh;
+                align-self: flex-end;
             }
 
             .socialIcons {
                 position: absolute;
-                top: 0;
                 display: flex;
-
-                .iconLinkG {
-                    text-decoration: none;
-                    color: inherit;
-
-                    .icon {
-                        width: 20%;
-                    }
-                }
-
+                top: 1vh;
+                margin-right: 20vw;
+                
+                        
+                .iconLinkG,
                 .iconLinkL {
                     text-decoration: none;
                     color: inherit;
+                    margin-right: 1vw;
 
                     .icon {
-                        width: 20%;
+                        height: 3vh;
                     }
-                }
+                }    
             }
         }
     }
@@ -79,18 +82,18 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            font-size: 30px;
+            font-size: 40px;
 
             .specialtie {
                 display: flex;
                 flex-direction: column;
                 width: 25vw;
                 align-items: center;
-                font-weight: 800;
+                font-weight: 700;
 
                 p {
-                    font-size: 15px;
-                    font-weight: 50;
+                    font-size: 20px;
+                    font-weight: 200;
                 }
             }
 
@@ -120,13 +123,13 @@
             width: 30vw;
             height: 30vh;
             margin: 5vh 0vh 0vh 0vw;
-            font-size: 50px;
-            font-weight: 900;
+            font-size: 70px;
+            font-weight: 700;
 
             p {
                 margin-top: 2vh;
-                font-size: 16px;
-                font-weight: 100;
+                font-size: 20px;
+                font-weight: 200;
                 text-align: justify;
                 line-height: 3vh;
             }
@@ -149,7 +152,6 @@
                     margin-top: 2vh;
                     padding: 1vh;
                     outline: 0;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 15px;
                     word-wrap:break-all;
                 }
@@ -161,7 +163,6 @@
                     outline: 0;
                     padding: 1vh;
                     margin-top: 2vh;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
                     font-size: 15px;
                     resize: vertical;
                 }
@@ -181,15 +182,19 @@
 
         .socialMedia {
             display: flex;
-            justify-content: space-between;
+            justify-content: end;
             width: 80vw;
             height: 10vh;
             border-top: solid 0.1vh;
 
             span{
                 margin-top: 2vh;
+
+                img{
+                    margin-left: 1.5vw;
+                    height: 3.5vh;
+                }
             }
-            
         }
     }
 }

@@ -8,27 +8,31 @@ export const Home = () => {
     <main className="container">
 
       <section className="apresentation">
+
         <div className="text">
           <div className="title">
             <p>Muito prazer em conhecê-lo!</p>
-            <p>Sou o Marcos Fernandes.</p>
+            <p>Sou o <u>Marcos Fernandes.</u></p>
           </div>
           <div className="headline">
             <p>Desenvolvedor front end, apaixonado por criar sites e apps.</p>
             <button>CONTATE-ME</button>
           </div>
         </div>
+
         <div className="photo">
           <img className="myPhoto" src={foto} alt="Photo" />
           <div className="socialIcons">
-            <a className="iconLinkG" href="https://www.globo.com/">
+            <span> <a className="iconLinkG" href="https://github.com/MarcosFernandes99">
               <img className="icon" src={github} alt="icon" />
-            </a>
-            <a className="iconLinkL" href="https://ge.globo.com/?utm_source=globo.com&utm_medium=header">
+            </a></span>
+
+            <span> <a className="iconLinkL" href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/">
               <img className="icon" src={linkedin} alt="icon" />
-            </a>
+            </a></span>
           </div>
         </div>
+
       </section>
 
       <section className="specialties">
@@ -52,16 +56,16 @@ export const Home = () => {
         </div>
         <div className="sectionForm">
           <form className="form" action="Submit">
-            <textarea placeholder="Nome"/>
-            <textarea placeholder="Email"/>
-            <textarea className="msg" placeholder="Mensagem"/>
+            <textarea placeholder="Nome" />
+            <textarea placeholder="Email" />
+            <textarea className="msg" placeholder="Mensagem" />
             <button className="submitBtn" type="submit">ENVIAR MENSAGEM</button>
           </form>
 
         </div>
         <div className="socialMedia">
-          <span>marcos.jr23</span>
-          <span className="icon">AAAA</span>
+          <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
+          <span className="icon"><a href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/"><img src={linkedin} alt="Linkedin" /></a></span>
         </div>
 
       </section>
