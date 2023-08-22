@@ -52,8 +52,8 @@ export const Home = () => {
         </div>
         <div className="sectionForm">
           <form className="form" action="Submit">
-            <input type="text" placeholder="Nome"/>
-            <input type="text" placeholder="Email"/>
+            <textarea placeholder="Nome"/>
+            <textarea placeholder="Email"/>
             <textarea className="msg" placeholder="Mensagem"/>
             <button className="submitBtn" type="submit">ENVIAR MENSAGEM</button>
           </form>
