@@ -7,6 +7,12 @@ import todoList from "../assets/todoList.svg.png"
 import weatherApp from "../assets/weatherApp.svg.png"
 
 export const Home = () => {
+
+  const scrollForm = () => {
+    const form : any = document.getElementById("meuForm");
+    form.scrollIntoView({behavior: "smooth"})
+  }
+
   return (
     <main className="container">
       <section className="apresentation">
@@ -17,7 +23,7 @@ export const Home = () => {
           </div>
           <div className="headline">
             <p>Desenvolvedor front end, apaixonado por criar sites e apps.</p>
-            <button>CONTATE-ME</button>
+            <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
           </div>
         </div>
 
@@ -49,7 +55,7 @@ export const Home = () => {
       <section className="projects">
         <div className="titleContact">
           <span className="titleProjects">Projetos</span>
-          <button className="contactProjects"><u>CONTATE-ME</u></button>
+          <button className="btn" onClick={scrollForm}><u>CONTATE-ME</u></button>
         </div>
 
         <div className="sectionProjects">
@@ -86,13 +92,12 @@ export const Home = () => {
           Por favor preencha o formulário, e eu entro em contato o mais breve possível</p>
         </div>
         <div className="sectionForm">
-          <form className="form" action="Submit">
+          <form id="meuForm" className="form" action="Submit">
             <textarea placeholder="Nome" />
             <textarea placeholder="Email" />
             <textarea className="msg" placeholder="Mensagem" />
             <button className="submitBtn" type="submit">ENVIAR MENSAGEM</button>
           </form>
-
         </div>
         <div className="socialMedia">
           <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
