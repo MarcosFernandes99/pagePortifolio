@@ -51,10 +51,33 @@ export const Home = () => {
           <span className="titleProjects">Projetos</span>
           <button className="contactProjects"><u>CONTATE-ME</u></button>
         </div>
+
         <div className="sectionProjects">
-          <span className="project"><a href="http://"><img src={todoList} alt="TodoList" /></a></span>
-          <span className="project"><a href="http://"><img src={expenseChart} alt="ExpenseChart" /></a></span>
-          <span className="project"><a href="http://"><img src={weatherApp} alt="WeatherApp" /></a></span>
+
+          <span className="project">
+            <a href="http://">
+              <img src={todoList} alt="TodoList" />
+            </a>
+            <p className="nameProjects">TODO WEB APP</p>
+            <p className="technologies">HTML CSS JAVASCRIPT</p>
+          </span>
+
+          <span className="project">
+            <a href="http://">
+              <img src={expenseChart} alt="ExpenseChart" />
+            </a>
+            <p className="nameProjects">EXPENSES CHART COMPONENT</p>
+            <p className="technologies">HTML CSS JAVASCRIPT</p>
+          </span>
+
+          <span className="project">
+            <a href="http://">
+              <img src={weatherApp} alt="WeatherApp" />
+            </a>
+            <p className="nameProjects">WEATHER APP</p>
+            <p className="technologies">HTML CSS JAVASCRIPT API</p>
+          </span>
+
         </div>
       </section>
 
