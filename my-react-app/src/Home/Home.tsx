@@ -1,14 +1,15 @@
 import "./style.scss"
 import foto from "../assets/imagem.svg.png"
-import github from "../assets/github (1).png"
+import github from "../assets/github.svg.png"
 import linkedin from "../assets/linkedin.svg.png"
+import expenseChart from "../assets/expenseChart.svg.png"
+import todoList from "../assets/todoList.svg.png"
+import weatherApp from "../assets/weatherApp.svg.png"
 
 export const Home = () => {
   return (
     <main className="container">
-
       <section className="apresentation">
-
         <div className="text">
           <div className="title">
             <p>Muito prazer em conhecê-lo!</p>
@@ -32,7 +33,6 @@ export const Home = () => {
             </a></span>
           </div>
         </div>
-
       </section>
 
       <section className="specialties">
@@ -47,7 +47,15 @@ export const Home = () => {
       </section>
 
       <section className="projects">
-
+        <div className="titleContact">
+          <span className="titleProjects">Projetos</span>
+          <button className="contactProjects"><u>CONTATE-ME</u></button>
+        </div>
+        <div className="sectionProjects">
+          <span className="project"><a href="http://"><img src={todoList} alt="TodoList" /></a></span>
+          <span className="project"><a href="http://"><img src={expenseChart} alt="ExpenseChart" /></a></span>
+          <span className="project"><a href="http://"><img src={weatherApp} alt="WeatherApp" /></a></span>
+        </div>
       </section>
 
       <section className="contact">
@@ -67,7 +75,6 @@ export const Home = () => {
           <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
           <span className="icon"><a href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/"><img src={linkedin} alt="Linkedin" /></a></span>
         </div>
-
       </section>
     </main>
   )

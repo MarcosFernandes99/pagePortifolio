@@ -6,7 +6,7 @@
 
     .apresentation {
         display: flex;
-        width: 80vw;
+        width: 70vw;
         height: 60vh;
 
         .text {
@@ -14,19 +14,19 @@
             flex-direction: column;
             justify-content: center;
             width: 50%;
-            
-            .title{
-                font-size: 50px;
+
+            .title {
+                font-size: 47px;
                 font-weight: 700;
             }
 
-            .headline{
+            .headline {
                 margin-top: 5vh;
                 font-size: 20px;
                 font-weight: 300;
                 text-align: justify;
                 line-height: 3vh;
-                
+
                 button {
                     margin-top: 5vh;
                     background-color: var(--slateGray);
@@ -35,7 +35,7 @@
                     font-weight: 700;
                     cursor: pointer;
                 }
-            }              
+            }
         }
 
         .photo {
@@ -45,7 +45,7 @@
             align-items: flex-end;
             width: 50%;
 
-            .myPhoto {                
+            .myPhoto {
                 border-radius: 2vh;
                 align-self: flex-end;
             }
@@ -55,8 +55,8 @@
                 display: flex;
                 top: 1vh;
                 margin-right: 20vw;
-                
-                        
+
+
                 .iconLinkG,
                 .iconLinkL {
                     text-decoration: none;
@@ -66,14 +66,14 @@
                     .icon {
                         height: 3vh;
                     }
-                }    
+                }
             }
         }
     }
 
     .specialties {
         display: flex;
-        width: 75vw;
+        width: 80vw;
         height: 40vh;
         margin-top: 5vh;
         border-top: solid 0.1vh;
@@ -96,16 +96,56 @@
                     font-weight: 200;
                 }
             }
-
         }
     }
 
     .projects {
-        width: 80vw;
-        height: 40vh;
-        margin-top: 5vh;
-        border-style: solid;
-        border-width: 0.2vw;
+        display: flex;
+        flex-wrap: wrap;
+        width: 85vw;
+        margin-top: 5vh; 
+        justify-content: center;
+
+        .titleContact{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 3vh;
+            width: 80vw;
+            
+            .titleProjects{
+                font-size: 4rem;
+                font-weight: 700;
+            }
+
+            .contactProjects{
+                background-color: var(--slateGray);
+                font-size: 1rem;
+                font-weight: 700;
+                cursor: pointer;
+            }
+        }
+
+        .sectionProjects {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+
+            .project {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 40vw;
+
+                a,
+                img {
+                    width: 100%;
+                    height: 70vh;
+                    border-radius: 1rem;
+                }
+            }
+        }
     }
 
     .contact {
@@ -139,13 +179,14 @@
             display: flex;
             flex-direction: column;
             width: 50vw;
-            height: 30vh;            
+            height: 30vh;
 
-            .form{
+            .form {
                 margin: 0vh 0vw 0vh auto;
                 display: flex;
                 flex-direction: column;
-                textarea{
+
+                textarea {
                     width: 30vw;
                     background-color: var(--lightSteelBlue);
                     border-bottom: solid 0.1vh;
@@ -153,10 +194,10 @@
                     padding: 1vh;
                     outline: 0;
                     font-size: 15px;
-                    word-wrap:break-all;
+                    word-wrap: break-all;
                 }
 
-                .msg{
+                .msg {
                     background-color: var(--lightSteelBlue);
                     border-bottom: solid 0.1vh;
                     height: 10vh;
@@ -167,7 +208,7 @@
                     resize: vertical;
                 }
 
-                .submitBtn{
+                .submitBtn {
                     align-self: flex-end;
                     margin-top: 2vh;
                     background-color: var(--lightSteelBlue);
@@ -187,10 +228,10 @@
             height: 10vh;
             border-top: solid 0.1vh;
 
-            span{
+            span {
                 margin-top: 2vh;
 
-                img{
+                img {
                     margin-left: 1.5vw;
                     height: 3.5vh;
                 }
