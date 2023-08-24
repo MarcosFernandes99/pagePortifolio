@@ -5,13 +5,34 @@ import linkedin from "../assets/linkedin.svg.png"
 import expenseChart from "../assets/expenseChart.svg.png"
 import todoList from "../assets/todoList.svg.png"
 import weatherApp from "../assets/weatherApp.svg.png"
+import Swal from "sweetalert2"
+import { useRef } from "react"
 
 export const Home = () => {
+  const nameRef :any= useRef(null);
+  const emailRef :any= useRef(null);
+  const mensagemRef :any= useRef(null);
+  const telefoneRef :any= useRef(null);
+
 
   const scrollForm = () => {
-    const form : any = document.getElementById("meuForm");
-    form.scrollIntoView({behavior: "smooth"})
+    const form: any = document.getElementById("meuForm");
+    form.scrollIntoView({ behavior: "smooth" })
   }
+
+  const alert= () => {
+    Swal.fire(
+      'Mensagem enviada com sucesso!',
+      '',
+      'success'
+    );
+    nameRef.current.value = "";
+    emailRef.current.value = "";
+    mensagemRef.current.value = "";
+    telefoneRef.current.value = "";
+  }
+
+
 
   return (
     <main className="container">
@@ -93,11 +114,12 @@ export const Home = () => {
         </div>
         <div className="sectionForm">
           <form id="meuForm" className="form" action="Submit">
-            <textarea placeholder="Nome" />
-            <textarea placeholder="Email" />
-            <textarea className="msg" placeholder="Mensagem" />
-            <button className="submitBtn" type="submit">ENVIAR MENSAGEM</button>
+            <textarea ref={nameRef} id="Name" placeholder="Nome" />
+            <textarea ref={emailRef} id="Email" placeholder="Email" />
+            <textarea ref={telefoneRef} id="Telefone" placeholder="Telefone" />
+            <textarea ref={mensagemRef} id="Msg" className="msg" placeholder="Mensagem" />
           </form>
+          <button className="submitBtn" type="submit" onClick={alert}>ENVIAR MENSAGEM</button>
         </div>
         <div className="socialMedia">
           <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
