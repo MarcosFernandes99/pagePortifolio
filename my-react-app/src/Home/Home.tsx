@@ -85,7 +85,9 @@ export const Home = () => {
             <p>Sou o <u>Marcos Fernandes.</u></p>
           </div>
           <div className="headline">
-            <p>Desenvolvedor front end, apaixonado por criar sites e apps.</p>
+            <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, HTML, CSS, SASS e APis. 
+              Atualmente atuo como freelancer desenvolvendo interfaces para sites e aplicativos, com habilidade em implementar soluções modernas 
+              e atraentes oferecendo assim a melhor experiência possível para o usuário.</p>
             <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
           </div>
         </div>
@@ -158,7 +160,7 @@ export const Home = () => {
 
       <section className="contact">
         <div className="sectionContact">Contato <p>Eu adoraria ouvir sobre seu projeto e como eu poderia ajudar.
-          Por favor preencha o formulário, e eu entro em contato o mais breve possível</p>
+          Por favor preencha o formulário, e eu entro em contato o mais breve possível. Até logo!</p>
         </div>
         <div className="sectionForm">
           <form id="meuForm" className="form" action="Submit">
