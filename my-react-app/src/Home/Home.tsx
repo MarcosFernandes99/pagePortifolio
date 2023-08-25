@@ -35,7 +35,6 @@ export const Home = () => {
       );
       return;
     }
-
     const data = {
       nome,
       email,
@@ -119,7 +118,7 @@ export const Home = () => {
       <section className="projects">
         <div className="titleContact">
           <span className="titleProjects">Projetos</span>
-          <button className="btn" onClick={scrollForm}><u>CONTATE-ME</u></button>
+          <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
         </div>
 
         <div className="sectionProjects">

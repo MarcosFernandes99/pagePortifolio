@@ -31,11 +31,18 @@
                 button {
                     margin-top: 5vh;
                     background-color: var(--grey11);
-                    border-bottom: 0.3vh solid white;
+                    border-bottom: 0.5vh solid #00FF00;
+                    border-radius: 1vh;
+                    padding: 1vh;
                     font-size: 15px;
                     font-weight: 700;
                     cursor: pointer;
                     color: var(--GhostWhite);
+                    opacity: 0.7;
+                }
+
+                button:hover{
+                    opacity: 1;
                 }
             }
         }
@@ -126,6 +133,14 @@
                 font-size: 1rem;
                 font-weight: 700;
                 cursor: pointer;
+                opacity: 0.7;
+                border-bottom: 0.5vh solid #00FF00;
+                border-radius: 1vh;
+                margin-top: 5vh;
+            }
+            button:hover{
+                transition-timing-function: linear;
+                opacity: 1;
             }
         }
 
@@ -222,14 +237,18 @@
 
             .submitBtn {
                 align-self: flex-end;
-                margin-top: 2vh;
+                margin-top: 1vh;
                 background-color: var(--DimGray);
                 color: var(--GhostWhite);
                 cursor: pointer;
-                border-bottom: solid;
                 border-radius: 10px;
-                padding: 1vh;
+                padding: 1.5vh;
                 font-weight: 700;
+            }
+            .submitBtn:hover{
+                background-color: var(--grey11);
+                transition-duration: 0.7s;
+                transition-timing-function: linear;
             }
         }
 
