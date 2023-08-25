@@ -1,38 +1,81 @@
 import "./style.scss"
-import foto from "../assets/imagem.svg.png"
-import github from "../assets/github.svg.png"
-import linkedin from "../assets/linkedin.svg.png"
-import expenseChart from "../assets/expenseChart.svg.png"
-import todoList from "../assets/todoList.svg.png"
-import weatherApp from "../assets/weatherApp.svg.png"
+import foto from "../Assets/imagem.svg.png"
+import github from "../Assets/github.svg.png"
+import linkedin from "../Assets/linkedin.svg.png"
+import expenseChart from "../Assets/expenseChart.svg.png"
+import todoList from "../Assets/todoList.svg.png"
+import weatherApp from "../Assets/weatherApp.svg.png"
+import movies from "../Assets/movies.svg.png"
 import Swal from "sweetalert2"
 import { useRef } from "react"
 
 export const Home = () => {
-  const nameRef :any= useRef(null);
-  const emailRef :any= useRef(null);
-  const mensagemRef :any= useRef(null);
-  const telefoneRef :any= useRef(null);
-
+  const nomeRef: any = useRef(null);
+  const emailRef: any = useRef(null);
+  const mensagemRef: any = useRef(null);
+  const telefoneRef: any = useRef(null);
 
   const scrollForm = () => {
     const form: any = document.getElementById("meuForm");
     form.scrollIntoView({ behavior: "smooth" })
   }
 
-  const alert= () => {
-    Swal.fire(
-      'Mensagem enviada com sucesso!',
-      '',
-      'success'
-    );
-    nameRef.current.value = "";
-    emailRef.current.value = "";
-    mensagemRef.current.value = "";
-    telefoneRef.current.value = "";
+  const sendMessage = async () => {
+    const nome = nomeRef.current.value;
+    const email = emailRef.current.value;
+    const mensagem = mensagemRef.current.value;
+    const telefone = telefoneRef.current.value;
+
+    if (!nome || !email || !telefone || !mensagem) {
+      // Verificar se todos os campos estão preenchidos antes de continuar
+      Swal.fire(
+        'Por favor, preencha todos os campos do formulário!',
+        '',
+        'error'
+      );
+      return;
+    }
+
+    const data = {
+      nome,
+      email,
+      telefone,
+      mensagem
+    };
+
+    try {
+      const response = await fetch('https://api.sheetmonkey.io/form/m3aA2Lb3NnSLS9toTDzdoi', {
+        method: "post",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+      });
+
+      if (response.ok) {
+        Swal.fire(
+          'Mensagem enviada com sucesso!',
+          '',
+          'success'
+        );
+        // Limpar os campos após o envio bem-sucedido
+        nomeRef.current.value = "";
+        emailRef.current.value = "";
+        telefoneRef.current.value = "";
+        mensagemRef.current.value = "";
+
+      } else {
+        throw new Error('Erro ao enviar mensagem');
+      }
+    } catch (error) {
+      Swal.fire(
+        'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente mais tarde.',
+        '',
+        'error'
+      );
+    }
   }
-
-
 
   return (
     <main className="container">
@@ -80,7 +123,6 @@ export const Home = () => {
         </div>
 
         <div className="sectionProjects">
-
           <span className="project">
             <a href="http://">
               <img src={todoList} alt="TodoList" />
@@ -105,6 +147,13 @@ export const Home = () => {
             <p className="technologies">HTML CSS JAVASCRIPT API</p>
           </span>
 
+          <span className="project">
+            <a href="http://">
+              <img src={movies} alt="Movies" />
+            </a>
+            <p className="nameProjects">Movies Streaming</p>
+            <p className="technologies">HTML CSS JAVASCRIPT API</p>
+          </span>
         </div>
       </section>
 
@@ -114,12 +163,12 @@ export const Home = () => {
         </div>
         <div className="sectionForm">
           <form id="meuForm" className="form" action="Submit">
-            <textarea ref={nameRef} id="Name" placeholder="Nome" />
-            <textarea ref={emailRef} id="Email" placeholder="Email" />
-            <textarea ref={telefoneRef} id="Telefone" placeholder="Telefone" />
-            <textarea ref={mensagemRef} id="Msg" className="msg" placeholder="Mensagem" />
+            <textarea ref={nomeRef} id="nome" placeholder="Nome" />
+            <textarea ref={emailRef} id="email" placeholder="Email" />
+            <textarea ref={telefoneRef} id="telefone" placeholder="Telefone" />
+            <textarea ref={mensagemRef} id="msg" className="msg" placeholder="Mensagem" />
           </form>
-          <button className="submitBtn" type="submit" onClick={alert}>ENVIAR MENSAGEM</button>
+          <button className="submitBtn" type="submit" onClick={sendMessage}>ENVIAR MENSAGEM</button>
         </div>
         <div className="socialMedia">
           <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
