@@ -2,10 +2,11 @@ import "./style.scss"
 import foto from "../Assets/imagem.svg.png"
 import github from "../Assets/github.svg.png"
 import linkedin from "../Assets/linkedin.svg.png"
+import insta from "../Assets/instagram.png"
+import gmail from "../Assets/gmail.png"
 import expenseChart from "../Assets/expenseChart.svg.png"
 import todoList from "../Assets/todoList.svg.png"
 import weatherApp from "../Assets/weatherApp.svg.png"
-import movies from "../Assets/movies.svg.png"
 import Swal from "sweetalert2"
 import { useRef } from "react"
 
@@ -85,8 +86,8 @@ export const Home = () => {
             <p>Sou o <u>Marcos Fernandes.</u></p>
           </div>
           <div className="headline">
-            <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, HTML, CSS, SASS e APis. 
-              Atualmente atuo como freelancer desenvolvendo interfaces para sites e aplicativos, com habilidade em implementar soluções modernas 
+            <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, HTML, CSS, SASS e APis.
+              Atualmente atuo como freelancer desenvolvendo interfaces para sites e aplicativos, com habilidade em implementar soluções modernas
               e atraentes oferecendo assim a melhor experiência possível para o usuário.</p>
             <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
           </div>
@@ -95,12 +96,17 @@ export const Home = () => {
         <div className="photo">
           <img className="myPhoto" src={foto} alt="Photo" />
           <div className="socialIcons">
-            <span> <a className="iconLinkG" href="https://github.com/MarcosFernandes99">
-              <img className="icon" src={github} alt="icon" />
+            <span> <a className="iconLink" href="https://github.com/MarcosFernandes99">
+              <img className="icon" src={github} alt="Github" />
             </a></span>
-
-            <span> <a className="iconLinkL" href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/">
-              <img className="icon" src={linkedin} alt="icon" />
+            <span> <a className="iconLink" href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/">
+              <img className="icon" src={linkedin} alt="Linkedin" />
+            </a></span>
+            <span> <a className="iconLink" href="https://www.instagram.com/marcos.jr23/">
+              <img className="icon" src={insta} alt="Instagram" />
+            </a></span>
+            <span> <a className="iconLink" href="mailto:juniorfernandes230@gmail.com">
+              <img className="icon" src={gmail} alt="Email" />
             </a></span>
           </div>
         </div>
@@ -124,37 +130,29 @@ export const Home = () => {
         </div>
 
         <div className="sectionProjects">
-          <span className="project">
+          <div className="project">
             <a href="http://">
               <img src={todoList} alt="TodoList" />
             </a>
             <p className="nameProjects">TODO WEB APP</p>
             <p className="technologies">HTML CSS JAVASCRIPT</p>
-          </span>
+          </div>
 
-          <span className="project">
+          <div className="project">
             <a href="http://">
               <img src={expenseChart} alt="ExpenseChart" />
             </a>
             <p className="nameProjects">EXPENSES CHART COMPONENT</p>
             <p className="technologies">HTML CSS JAVASCRIPT</p>
-          </span>
+          </div>
 
-          <span className="project">
+          <div className="project">
             <a href="http://">
               <img src={weatherApp} alt="WeatherApp" />
             </a>
             <p className="nameProjects">WEATHER APP</p>
             <p className="technologies">HTML CSS JAVASCRIPT API</p>
-          </span>
-
-          <span className="project">
-            <a href="http://">
-              <img src={movies} alt="Movies" />
-            </a>
-            <p className="nameProjects">Movies Streaming</p>
-            <p className="technologies">HTML CSS JAVASCRIPT API</p>
-          </span>
+          </div>       
         </div>
       </section>
 
@@ -174,6 +172,8 @@ export const Home = () => {
         <div className="socialMedia">
           <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
           <span className="icon"><a href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/"><img src={linkedin} alt="Linkedin" /></a></span>
+          <span className="icon"><a href="https://www.instagram.com/marcos.jr23/"><img src={insta} alt="Instagram" /></a></span>
+          <span className="icon"><a href="mailto:juniorfernandes230@gmail.com"><img src={gmail} alt="Email" /></a></span>
         </div>
       </section>
     </main>
