@@ -96,16 +96,16 @@ export const Home = () => {
         <div className="photo">
           <img className="myPhoto" src={foto} alt="Photo" />
           <div className="socialIcons">
-            <span> <a className="iconLink" href="https://github.com/MarcosFernandes99">
+            <span> <a className="iconLink" href="https://github.com/MarcosFernandes99" target="_blank">
               <img className="icon" src={github} alt="Github" />
             </a></span>
-            <span> <a className="iconLink" href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/">
+            <span> <a className="iconLink" href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/" target="_blank">
               <img className="icon" src={linkedin} alt="Linkedin" />
             </a></span>
-            <span> <a className="iconLink" href="https://www.instagram.com/marcos.jr23/">
+            <span> <a className="iconLink" href="https://www.instagram.com/marcos.jr23/" target="_blank">
               <img className="icon" src={insta} alt="Instagram" />
             </a></span>
-            <span> <a className="iconLink" href="mailto:juniorfernandes230@gmail.com">
+            <span> <a className="iconLink" href="mailto:juniorfernandes230@gmail.com" target="_blank">
               <img className="icon" src={gmail} alt="Email" />
             </a></span>
           </div>
@@ -117,9 +117,9 @@ export const Home = () => {
           <span className="specialtie">HTML <p>1 ano de experiência</p></span>
           <span className="specialtie">Javascript <p>1 ano de experiência</p></span>
           <span className="specialtie">CSS <p>1 ano de experiência</p></span>
-          <span className="specialtie">React <p>1 ano de experiência</p></span>
-          <span className="specialtie">Sass <p>1 ano de experiência</p></span>
-          <span className="specialtie">API <p>1 ano de experiência</p></span>
+          <span className="specialtie">React <p>6 meses de experiência</p></span>
+          <span className="specialtie">Sass <p>6 meses de experiência</p></span>
+          <span className="specialtie">API <p>6 meses de experiência</p></span>
         </div>
       </section>
 
@@ -131,15 +131,15 @@ export const Home = () => {
 
         <div className="sectionProjects">
           <div className="project">
-            <a href="http://">
+            <a href="https://todo-list-3297fe.netlify.app" target="_blank">
               <img src={todoList} alt="TodoList" />
             </a>
-            <p className="nameProjects">TODO WEB APP</p>
+            <p className="nameProjects">TODO LIST</p>
             <p className="technologies">HTML CSS JAVASCRIPT</p>
           </div>
 
           <div className="project">
-            <a href="http://">
+            <a href="https://expense-chart-9d8713.netlify.app" target="_blank">
               <img src={expenseChart} alt="ExpenseChart" />
             </a>
             <p className="nameProjects">EXPENSES CHART COMPONENT</p>
@@ -147,7 +147,7 @@ export const Home = () => {
           </div>
 
           <div className="project">
-            <a href="http://">
+            <a href="https://weatther-app-20he.netlify.app" target="_blank">
               <img src={weatherApp} alt="WeatherApp" />
             </a>
             <p className="nameProjects">WEATHER APP</p>
@@ -170,10 +170,10 @@ export const Home = () => {
           <button className="submitBtn" type="submit" onClick={sendMessage}>ENVIAR MENSAGEM</button>
         </div>
         <div className="socialMedia">
-          <span className="icon"><a href="https://github.com/MarcosFernandes99"><img src={github} alt="Github" /></a></span>
-          <span className="icon"><a href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/"><img src={linkedin} alt="Linkedin" /></a></span>
-          <span className="icon"><a href="https://www.instagram.com/marcos.jr23/"><img src={insta} alt="Instagram" /></a></span>
-          <span className="icon"><a href="mailto:juniorfernandes230@gmail.com"><img src={gmail} alt="Email" /></a></span>
+          <span className="icon"><a href="https://github.com/MarcosFernandes99" target="_blank"><img src={github} alt="Github" /></a></span>
+          <span className="icon"><a href="https://www.linkedin.com/in/marcos-fernandes-8a4711175/" target="_blank"><img src={linkedin} alt="Linkedin" /></a></span>
+          <span className="icon"><a href="https://www.instagram.com/marcos.jr23/" target="_blank"><img src={insta} alt="Instagram" /></a></span>
+          <span className="icon"><a href="mailto:juniorfernandes230@gmail.com" target="_blank"><img src={gmail} alt="Email" /></a></span>
         </div>
       </section>
     </main>
