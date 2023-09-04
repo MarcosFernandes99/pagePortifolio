@@ -8,7 +8,7 @@
     .apresentation {
         display: flex;
         width: 70vw;
-        height: 60vh;
+        height: 70vh;
 
         .text {
             display: flex;
@@ -17,7 +17,7 @@
             width: 50%;
 
             .title {
-                font-size: 47px;
+                font-size: 3.5rem;
                 font-weight: 700;
             }
 
@@ -27,45 +27,11 @@
                 font-weight: 300;
                 text-align: justify;
                 line-height: 3vh;
-
-                button {
-                    margin-top: 5vh;
-                    background-color: var(--grey11);
-                    border-bottom: 0.5vh solid #00FF00;
-                    border-radius: 1vh;
-                    padding: 1vh;
-                    font-size: 15px;
-                    font-weight: 700;
-                    cursor: pointer;
-                    color: var(--GhostWhite);
-                    transition: transform .3s;
-                }
-
-                button:hover {
-                    transform: scale(1.1);
-                }
-            }
-        }
-
-        .photo {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            width: 50%;
-            
-            .myPhoto {
-                border-radius: 35vh;
-                align-self: flex-end;
-                
             }
 
             .socialIcons {
-                position: absolute;
                 display: flex;
-                top: 1vh;
-                margin-right: 23vw;
-
+                margin-top: 3vh;
 
                 .iconLink {
                     text-decoration: none;
@@ -77,10 +43,46 @@
                         transition: transform .3s;
                     }
 
-                    .icon:hover{
+                    .icon:hover {
                         transform: scale(1.3);
                     }
                 }
+            }
+
+            button {
+                margin-top: 5vh;
+                background-color: var(--grey11);
+                border-bottom: 0.5vh solid #00FF00;
+                width: 8vw;
+                border-radius: 1vh;
+                padding: 1vh;
+                font-size: 15px;
+                font-weight: 700;
+                cursor: pointer;
+                color: var(--GhostWhite);
+                transition: transform .3s;
+            }
+
+            button:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .photo {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .myPhoto {
+                border: 1px solid #ddd;
+                border-radius: 35vh;
+                padding: 1rem;
+                max-width: 100%;
+                height: auto;
+                margin-top: 3vh;
+                margin-left: 3vw;
+                filter: drop-shadow(10px 10px 10px var(--GhostWhite));
             }
         }
     }
@@ -91,6 +93,9 @@
         height: 40vh;
         margin-top: 5vh;
         border-top: solid 0.1vh;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
 
         .sectionSpecialties {
             display: flex;
@@ -112,6 +117,11 @@
                 }
             }
         }
+    }
+
+    .specialties.visible {
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .projects {
@@ -156,12 +166,16 @@
             justify-content: center;
             gap: 2rem;
 
+
             .project {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 40vw;
-                transition: transform .3s;
+                width: 40vw;                
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.5s, transform 0.1s;
+
 
                 .nameProjects {
                     margin-top: 2vh;
@@ -189,6 +203,11 @@
         }
     }
 
+    .projects .project.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     .contact {
         display: flex;
         flex-wrap: wrap;
@@ -197,7 +216,9 @@
         height: 50vh;
         margin-top: 5vh;
         background-color: var(--DimGray);
-
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s, transform 0.5s;
 
         .sectionContact {
             display: flex;
@@ -279,8 +300,287 @@
                     transition: transform .3s;
                 }
 
-                img:hover{
+                img:hover {
                     transform: scale(1.3);
+                }
+            }
+        }
+    }
+
+    .contact.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .container {
+        .apresentation {
+            height: 60vh;
+
+            .text {
+                width: 55vw;
+
+                .btn {
+                    width: 9vw;
+                }
+
+            }
+        }
+
+        .photo {
+            padding: 2vh;
+
+            .myPhoto {
+                height: 90%;
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .container {
+        .apresentation {
+            .text {
+                width: 60vw;
+
+                .title {
+                    font-size: 3rem;
+                }
+
+                .headline {
+                    font-size: 1rem;
+                }
+
+                .btn {
+                    width: 10vw;
+                }
+            }
+
+        }
+
+        .photo {
+            padding: 2vh;
+
+            .myPhoto {
+
+                height: 80%;
+                margin-top: 4vh;
+            }
+
+        }
+
+        .specialties {
+            .sectionSpecialties {
+                font-size: 2.5rem;
+
+                .specialtie {
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .projects {
+            .titleContact {
+                .titleProjects {
+                    font-size: 3rem;
+                }
+            }
+        }
+
+        .contact {
+            .sectionContact {
+                font-size: 4rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .container {
+        .apresentation {
+            .text {
+                width: 60vw;
+
+                .title {
+                    font-size: 3rem; ///
+                }
+
+                .headline {
+                    font-size: 1rem;
+                }
+
+                .btn {
+                    width: 12vw;
+                }
+            }
+
+        }
+
+        .photo {
+            padding: 4vh;
+
+            .myPhoto {
+                height: 70%;
+                margin-top: 4vh;
+            }
+
+        }
+
+        .specialties {
+            .sectionSpecialties {
+                font-size: 2rem;
+
+                .specialtie {
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+
+        .projects {
+            width: 90vw;
+
+            .titleContact {
+                .titleProjects {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .sectionProjects {
+
+                .project {
+                    max-width: 40vw;
+
+                    a {
+                        img {
+                            height: 50vh;
+                        }
+                    }
+
+                    .nameProjects {
+                        margin-top: -20vh;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            .sectionContact {
+                font-size: 3.5rem;
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .container {
+        .apresentation {
+            width: 80vw;
+
+            .text {
+
+                .title {
+                    font-size: 3rem; ///
+                }
+
+                .btn {
+                    width: 15vw;
+                }
+
+
+            }
+
+        }
+
+        .photo {
+            .myPhoto {
+                height: 50%;
+
+            }
+
+        }
+
+        .projects {
+            width: 90vw;
+
+            .titleContact {
+                .titleProjects {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .sectionProjects {
+
+                .project {
+                    a {
+                        img {
+                            height: 40vh;
+                        }
+                    }
+
+                    .nameProjects {
+                        margin-top: -30vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .container {
+        .apresentation {
+            width: 80vw;
+
+            .text {
+
+                .title {
+                    font-size: 2rem; ///
+                }
+
+
+            }
+
+        }
+
+        .photo {
+            .myPhoto {
+                height: 50%;
+
+            }
+
+        }
+
+        .projects {
+            width: 90vw;
+
+            .titleContact {
+                .titleProjects {
+                    font-size: 2.5rem;
+                }
+            }
+
+            .sectionProjects {
+
+                .project {
+                    a {
+                        img {
+                            height: 40vh;
+                        }
+                    }
+
+                    .nameProjects {
+                        margin-top: -30vh;
+                    }
                 }
             }
         }

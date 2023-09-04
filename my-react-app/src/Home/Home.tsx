@@ -77,24 +77,55 @@ export const Home = () => {
     }
   }
 
+  // Função para verificar se um elemento está na visualização
+  function isElementInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  // Função para adicionar a classe "visible" quando a seção está na visualização
+  function handleSectionVisibility(sectionId) {
+    const section = document.getElementById(sectionId);
+
+    if (section && isElementInViewport(section)) {
+      section.classList.add("visible");      
+    }
+  }
+
+  function handleProjectVisibility() {
+    const projectElements = document.querySelectorAll(".project");
+  
+    projectElements.forEach((element) => {
+      if (isElementInViewport(element)) {
+        element.classList.add("visible");
+      }
+    });
+  }
+
+  // Adicione um ouvinte de evento de rolagem para chamar handleSectionVisibility quando o usuário rolar a página
+  window.addEventListener("scroll", () => {
+    handleSectionVisibility("specialties");
+    handleProjectVisibility();
+    handleSectionVisibility("contact");
+  });
+
   return (
     <main className="container">
       <section className="apresentation">
         <div className="text">
           <div className="title">
-            <p>Muito prazer em conhecê-lo!</p>
-            <p>Sou o <u>Marcos Fernandes.</u></p>
+            <p>Marcos Fernandes</p>
           </div>
           <div className="headline">
             <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, HTML, CSS, SASS e APis.
               Atualmente atuo como freelancer desenvolvendo interfaces para sites e aplicativos, com habilidade em implementar soluções modernas
               e atraentes oferecendo assim a melhor experiência possível para o usuário.</p>
-            <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
           </div>
-        </div>
-
-        <div className="photo">
-          <img className="myPhoto" src={foto} alt="Photo" />
           <div className="socialIcons">
             <span> <a className="iconLink" href="https://github.com/MarcosFernandes99" target="_blank">
               <img className="icon" src={github} alt="Github" />
@@ -109,10 +140,15 @@ export const Home = () => {
               <img className="icon" src={gmail} alt="Email" />
             </a></span>
           </div>
+          <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
+        </div>
+
+        <div className="photo">
+          <img className="myPhoto" src={foto} alt="Photo" />
         </div>
       </section>
 
-      <section className="specialties">
+      <section className="specialties" id="specialties">
         <div className="sectionSpecialties">
           <span className="specialtie">HTML <p>1 ano de experiência</p></span>
           <span className="specialtie">Javascript <p>1 ano de experiência</p></span>
@@ -123,7 +159,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="projects">
+      <section className="projects" id="projects">
         <div className="titleContact">
           <span className="titleProjects">Projetos</span>
           <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
@@ -142,7 +178,7 @@ export const Home = () => {
             <a href="https://expense-chart-9d8713.netlify.app" target="_blank">
               <img src={expenseChart} alt="ExpenseChart" />
             </a>
-            <p className="nameProjects">EXPENSES CHART COMPONENT</p>
+            <p className="nameProjects">EXPENSES CHART</p>
             <p className="technologies">HTML CSS JAVASCRIPT</p>
           </div>
 
@@ -152,11 +188,11 @@ export const Home = () => {
             </a>
             <p className="nameProjects">WEATHER APP</p>
             <p className="technologies">HTML CSS JAVASCRIPT API</p>
-          </div>       
+          </div>
         </div>
       </section>
 
-      <section className="contact">
+      <section className="contact" id="contact">
         <div className="sectionContact">Contato <p>Eu adoraria ouvir sobre seu projeto e como eu poderia ajudar.
           Por favor preencha o formulário, e eu entro em contato o mais breve possível. Até logo!</p>
         </div>
