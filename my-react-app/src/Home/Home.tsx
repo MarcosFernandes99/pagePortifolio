@@ -8,26 +8,23 @@ import expenseChart from "../Assets/expenseChart.svg.png"
 import todoList from "../Assets/todoList.svg.png"
 import weatherApp from "../Assets/weatherApp.svg.png"
 import Swal from "sweetalert2"
-import { useRef } from "react"
+import { useState } from "react"
 
 export const Home = () => {
-  const nomeRef: any = useRef(null);
-  const emailRef: any = useRef(null);
-  const mensagemRef: any = useRef(null);
-  const telefoneRef: any = useRef(null);
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [phone, setPhone] = useState('')
+
 
   const scrollForm = () => {
     const form: any = document.getElementById("meuForm");
     form.scrollIntoView({ behavior: "smooth" })
   }
 
-  const sendMessage = async () => {
-    const nome = nomeRef.current.value;
-    const email = emailRef.current.value;
-    const mensagem = mensagemRef.current.value;
-    const telefone = telefoneRef.current.value;
+  const sendMessage = async () => {    
 
-    if (!nome || !email || !telefone || !mensagem) {
+    if (!name || !email || !phone || !message) {
       // Verificar se todos os campos estão preenchidos antes de continuar
       Swal.fire(
         'Por favor, preencha todos os campos do formulário!',
@@ -37,10 +34,10 @@ export const Home = () => {
       return;
     }
     const data = {
-      nome,
+      name,
       email,
-      telefone,
-      mensagem
+      phone,
+      message
     };
 
     try {
@@ -60,10 +57,10 @@ export const Home = () => {
           'success'
         );
         // Limpar os campos após o envio bem-sucedido
-        nomeRef.current.value = "";
-        emailRef.current.value = "";
-        telefoneRef.current.value = "";
-        mensagemRef.current.value = "";
+        setName('')
+        setEmail('')
+        setMessage('')
+        setPhone('')
 
       } else {
         throw new Error('Erro ao enviar mensagem');
@@ -78,7 +75,7 @@ export const Home = () => {
   }
 
   // Função para verificar se um elemento está na visualização
-  function isElementInViewport(element) {
+  function isElementInViewport(element:any) {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -89,7 +86,7 @@ export const Home = () => {
   }
 
   // Função para adicionar a classe "visible" quando a seção está na visualização
-  function handleSectionVisibility(sectionId) {
+  function handleSectionVisibility(sectionId: any) {
     const section = document.getElementById(sectionId);
 
     if (section && isElementInViewport(section)) {
@@ -198,10 +195,10 @@ export const Home = () => {
         </div>
         <div className="sectionForm">
           <form id="meuForm" className="form" action="Submit">
-            <textarea ref={nomeRef} id="nome" placeholder="Nome" />
-            <textarea ref={emailRef} id="email" placeholder="Email" />
-            <textarea ref={telefoneRef} id="telefone" placeholder="Telefone" />
-            <textarea ref={mensagemRef} id="msg" className="msg" placeholder="Mensagem" />
+            <textarea onChange={(e) => setName(e.target.value)} value={name} id="nome" placeholder="Nome" />
+            <textarea onChange={(e) => setEmail(e.target.value)} value={email} id="email" placeholder="Email" />
+            <textarea onChange={(e) => setPhone(e.target.value)} value={phone} id="telefone" placeholder="Telefone" />
+            <textarea onChange={(e) => setMessage(e.target.value)} value={message} id="msg" className="msg" placeholder="Mensagem" />
           </form>
           <button className="submitBtn" type="submit" onClick={sendMessage}>ENVIAR MENSAGEM</button>
         </div>
