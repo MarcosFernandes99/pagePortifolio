@@ -8,7 +8,7 @@
     .apresentation {
         display: flex;
         width: 70vw;
-        height: 70vh;
+        height: 95vh;
 
         .text {
             display: flex;
@@ -31,7 +31,9 @@
 
             .socialIcons {
                 display: flex;
-                margin-top: 3vh;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 5vh;
 
                 .iconLink {
                     text-decoration: none;
@@ -47,24 +49,23 @@
                         transform: scale(1.3);
                     }
                 }
-            }
 
-            button {
-                margin-top: 5vh;
-                background-color: var(--grey11);
-                border-bottom: 0.5vh solid #00FF00;
-                width: 8vw;
-                border-radius: 1vh;
-                padding: 1vh;
-                font-size: 15px;
-                font-weight: 700;
-                cursor: pointer;
-                color: var(--GhostWhite);
-                transition: transform .3s;
-            }
+                .btn {
+                    background-color: var(--grey11);
+                    border-bottom: 0.5vh solid #00FF00;
+                    border-radius: 1vh;
+                    padding: 1vh;
+                    font-size: 15px;
+                    font-weight: 700;
+                    cursor: pointer;
+                    color: var(--GhostWhite);
+                    transition: transform .3s;
+                    margin-left: auto;
+                }
 
-            button:hover {
-                transform: scale(1.1);
+                .btn:hover {
+                    transform: scale(1.1);
+                }
             }
         }
 
@@ -73,6 +74,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            margin-top: 10vh;
 
             .myPhoto {
                 border: 1px solid #ddd;
@@ -127,15 +129,16 @@
     .projects {
         display: flex;
         flex-wrap: wrap;
-        width: 85vw;
         margin-top: 5vh;
         justify-content: center;
+        width: 80vw;
 
         .titleContact {
             display: flex;
             justify-content: space-between;
             margin-bottom: 3vh;
             width: 80vw;
+            align-items: center;
 
             .titleProjects {
                 font-size: 4rem;
@@ -150,11 +153,10 @@
                 cursor: pointer;
                 border-bottom: 0.5vh solid #00FF00;
                 border-radius: 1vh;
-                margin-top: 5vh;
                 transition: transform .3s;
             }
 
-            button:hover {
+            .btn:hover {
                 transform: scale(1.1);
             }
         }
@@ -171,7 +173,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                width: 40vw;                
+                width: 35vw;
                 opacity: 0;
                 transform: translateY(20px);
                 transition: opacity 0.5s, transform 0.1s;
@@ -218,7 +220,7 @@
         background-color: var(--DimGray);
         opacity: 0;
         transform: translateY(0);
-        transition: opacity 0.5s, transform 0.5s;    
+        transition: opacity 0.5s, transform 0.5s;
 
         .sectionContact {
             display: flex;
@@ -310,41 +312,38 @@
     .contact.visible {
         opacity: 1;
         transform: translateY(0);
-        
+
     }
 }
 
 @media screen and (max-width: 1450px) {
     .container {
         .apresentation {
-            height: 60vh;
+            height: 90vh;
 
             .text {
                 width: 55vw;
-
-                .btn {
-                    width: 9vw;
-                }
-
             }
         }
 
         .photo {
             padding: 2vh;
 
-            .myPhoto {
-                height: 90%;
-            }
-
         }
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1300px) {
     .container {
         .apresentation {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+            margin-top: 5vh;
+
             .text {
-                width: 60vw;
+                width: 70vw;
 
                 .title {
                     font-size: 3rem;
@@ -352,24 +351,20 @@
 
                 .headline {
                     font-size: 1rem;
+                    margin-top: 3vh;
                 }
 
-                .btn {
-                    width: 10vw;
+                .socialIcons{
+                    width: 75vw;
                 }
             }
 
-        }
-
-        .photo {
-            padding: 2vh;
-
-            .myPhoto {
-
-                height: 80%;
-                margin-top: 4vh;
+            .photo{
+                height: 70vh;
+                .myPhoto{
+                    height: 90%;
+                }
             }
-
         }
 
         .specialties {
@@ -400,11 +395,12 @@
     }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1175px) {
     .container {
         .apresentation {
+
             .text {
-                width: 60vw;
+                width: 80vw;
 
                 .title {
                     font-size: 3rem; ///
@@ -414,22 +410,20 @@
                     font-size: 1rem;
                 }
 
-                .btn {
-                    width: 12vw;
+                .socialIcons{
+                    width: 80vw;
                 }
             }
 
-        }
+            .photo {
+                height: 68vh;
 
-        .photo {
-            padding: 4vh;
-
-            .myPhoto {
-                height: 70%;
-                margin-top: 4vh;
+                .myPhoto {
+                    height: 90%;
+                }
             }
-
         }
+
 
         .specialties {
             .sectionSpecialties {
@@ -444,7 +438,6 @@
         }
 
         .projects {
-            width: 90vw;
 
             .titleContact {
                 .titleProjects {
@@ -455,8 +448,6 @@
             .sectionProjects {
 
                 .project {
-                    max-width: 40vw;
-
                     a {
                         img {
                             height: 50vh;
@@ -482,36 +473,36 @@
     }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1010px) {
     .container {
         .apresentation {
             width: 80vw;
+            margin-top: 8vh;
 
             .text {
 
                 .title {
+                    margin-top: -5vh;
                     font-size: 3rem; ///
                 }
 
-                .btn {
-                    width: 15vw;
+                .socialIcons{
+                    width: 80vw;
                 }
-
-
             }
 
-        }
-
-        .photo {
-            .myPhoto {
-                height: 50%;
-
+            .photo {
+                height: 68vh;
+                
+                .myPhoto {
+                    height: 80%;
+                }
             }
 
         }
 
         .projects {
-            width: 90vw;
+
 
             .titleContact {
                 .titleProjects {
@@ -537,29 +528,38 @@
     }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 730px) {
     .container {
         .apresentation {
-            width: 80vw;
+            height: 80vh;
 
             .text {
 
                 .title {
                     font-size: 2rem; ///
                 }
-
-
+                
             }
 
-        }
+            .photo {
+                height: 60vh;
 
-        .photo {
-            .myPhoto {
-                height: 50%;
-
+                .myPhoto {
+                    height: 80%;
+                }
             }
-
         }
+
+        .specialties {
+            .sectionSpecialties {
+                .specialtie {
+                    width: 40vw;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+
 
         .projects {
             width: 90vw;
@@ -573,6 +573,8 @@
             .sectionProjects {
 
                 .project {
+                    width: 60vw;
+
                     a {
                         img {
                             height: 40vh;
@@ -581,6 +583,153 @@
 
                     .nameProjects {
                         margin-top: -30vh;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            height: 80vh;
+
+            .sectionContact {
+                width: 80vw;
+                height: 20vh;
+            }
+
+            .sectionForm {
+                width: 80vw;
+                justify-content: flex-start;
+
+                .form {
+                    margin-left: 0;
+                    margin-top: 2vh;
+
+                    textarea {
+                        width: 90%;
+                    }
+
+
+                }
+
+                .submitBtn {
+                    margin-top: 3vh;
+                }
+
+            }
+
+            .socialMedia {
+
+                span {
+                    margin-top: 2vh;
+
+                    img {
+                        margin-left: 1.5vw;
+                        height: 4vh;
+                        transition: transform .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        .apresentation {
+
+            .text {
+
+                .headline {
+                    font-size: 0.9rem;
+                }
+
+                .socialIcons {
+                    
+                    .btn{
+                        font-size: 0.8rem;
+                    }
+                    .iconLink {
+                        .icon {
+                            height: 3vh;
+                        }
+                    }
+                }
+
+
+            }
+
+            .photo {
+                    margin-bottom: 7vh;
+                .myPhoto {
+                    height: 90%;
+                }
+            }
+        }
+
+        .specialties {
+            .sectionSpecialties {
+                .specialtie {
+                    width: 40vw;
+                    font-size: 1.2rem;
+
+                    p {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+
+
+
+        .projects {
+            width: 90vw;
+
+            .titleContact {
+                .titleProjects {
+                    font-size: 2.0rem;
+                }
+
+                .btn {
+                    font-size: 0.8rem;
+                }
+            }
+
+            .sectionProjects {
+
+                .project {
+                    width: 60vw;
+
+                    a {
+                        img {
+                            height: 40vh;
+                        }
+                    }
+
+                    .nameProjects {
+                        font-size: 1rem;
+                        margin-top: -30vh;
+                    }
+
+                    .technologies {
+                        font-size: 0.9rem;
+
+                    }
+                }
+            }
+        }
+
+        .contact{
+            .sectionContact{
+                font-size: 2rem;
+
+                p{
+                    font-size: 0.9rem;
+                }
+            }
+            .socialMedia{
+                span{
+                    img{
+                        height: 3vh;
                     }
                 }
             }

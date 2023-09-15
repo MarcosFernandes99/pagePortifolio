@@ -136,8 +136,8 @@ export const Home = () => {
             <span> <a className="iconLink" href="mailto:juniorfernandes230@gmail.com" target="_blank">
               <img className="icon" src={gmail} alt="Email" />
             </a></span>
-          </div>
-          <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
+            <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
+          </div>       
         </div>
 
         <div className="photo">
