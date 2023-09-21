@@ -805,8 +805,14 @@
     }
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 375px) {
     .container {
+
+        .apresentation {
+            height: 85vh;
+
+        }
+
         .specialties {
 
             .sectionSpecialties {
@@ -822,7 +828,20 @@
                 }
             }
         }
+
+        .contact {
+            height: 95vh;
+
+            .sectionForm {
+                height: 55vh;
+
+                .form {
+
+                    .submitBtn {
+                        width: 50vw
+                    }
+                }
+            }
+        }
     }
-
-
 }
