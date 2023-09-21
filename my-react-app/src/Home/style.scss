@@ -7,7 +7,7 @@
 
     .apresentation {
         display: flex;
-        width: 70vw;
+        width: 80vw;
         height: 95vh;
 
         .text {
@@ -52,7 +52,7 @@
 
                 .btn {
                     background-color: var(--grey11);
-                    border-bottom: 0.5vh solid #00FF00;
+                    border-bottom: 0.5vh solid #e81cff;
                     border-radius: 1vh;
                     padding: 1vh;
                     font-size: 15px;
@@ -84,7 +84,7 @@
                 height: auto;
                 margin-top: 3vh;
                 margin-left: 3vw;
-                filter: drop-shadow(10px 10px 10px var(--GhostWhite));
+                filter: drop-shadow(10px 10px 10px #e81cff);
             }
         }
     }
@@ -98,24 +98,51 @@
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.5s, transform 0.5s;
+        flex-wrap: wrap;
+
+        .section-title {
+            width: 80vw;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+        }
+
 
         .sectionSpecialties {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             font-size: 3rem;
+            justify-content: center;
 
             .specialtie {
                 display: flex;
                 flex-direction: column;
-                width: 25vw;
+                width: auto;
                 align-items: center;
                 font-weight: 700;
+                margin-left: 1.6rem;
 
-                p {
-                    margin-top: 1vh;
+                .specialtie-title {
+                    width: 25vw;
+                    display: flex;
+                    justify-content: space-between;
                     font-size: 1.5rem;
-                    font-weight: 300;
+                    margin-bottom: 0.5rem;
+                }
+
+                .progress-bar {
+                    width: 100%;
+                    height: 10px;
+                    background-color: #ffffff;
+                    border-radius: 0.5rem;
+
+                    .progress {
+                        height: 100%;
+                        background-color: #e81cff;
+                        position: relative;
+                        border-radius: 0.5rem;
+                    }
                 }
             }
         }
@@ -141,7 +168,7 @@
             align-items: center;
 
             .titleProjects {
-                font-size: 4rem;
+                font-size: 3.5rem;
                 font-weight: 700;
             }
 
@@ -151,7 +178,7 @@
                 font-size: 1rem;
                 font-weight: 700;
                 cursor: pointer;
-                border-bottom: 0.5vh solid #00FF00;
+                border-bottom: 0.5vh solid #e81cff;
                 border-radius: 1vh;
                 transition: transform .3s;
             }
@@ -214,8 +241,7 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
-        height: 50vh;
+        height: 60vh;
         margin-top: 5vh;
         background-color: var(--DimGray);
         opacity: 0;
@@ -228,7 +254,7 @@
             width: 30vw;
             height: 30vh;
             margin: 5vh 0vh 0vh 0vw;
-            font-size: 70px;
+            font-size: 3.5rem;
             font-weight: 700;
 
             p {
@@ -243,46 +269,94 @@
         .sectionForm {
             display: flex;
             flex-direction: column;
-            width: 50vw;
-            height: 40vh;
+            width: 45vw;
+            height: 47vh;
+            background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+            border: 2px solid transparent;
+            padding: 32px 24px;
+            font-size: 14px;
+            font-family: inherit;
+            color: white;
+            gap: 20px;
+            box-sizing: border-box;
+            border-radius: 16px;
+            margin-left: 5vw;
+            margin-top: 1vh;
 
             .form {
-                margin: 0vh 0vw 0vh auto;
+                gap: 20px;
                 display: flex;
                 flex-direction: column;
 
-                textarea {
-                    width: 30vw;
-                    background-color: var(--DimGray);
-                    border-bottom: solid 0.1vh white;
-                    margin-top: 1vh;
-                    padding: 1vh;
-                    outline: 0;
-                    font-size: 1rem;
-                    word-wrap: break-all;
-                    color: var(--GhostWhite);
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2px;
                 }
 
-                textarea::placeholder {
-                    color: var(--GhostWhite);
+                .form-group label {
+                    display: block;
+                    margin-bottom: 5px;
+                    color: #717171;
+                    font-weight: 600;
+                    font-size: 12px;
                 }
-            }
 
-            .submitBtn {
-                align-self: flex-end;
-                background-color: var(--DimGray);
-                color: var(--GhostWhite);
-                cursor: pointer;
-                margin-top: 2vh;
-                padding-bottom: 1vh;
-                font-weight: 700;
-                border-bottom: 0.5vh solid #00FF00;
-                border-radius: 1vh;
-                transition: tranform .3s;
-            }
+                .form-group input {
+                    width: 100%;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    color: #fff;
+                    font-family: inherit;
+                    background-color: transparent;
+                    border: 1px solid #414141;
+                }
 
-            .submitBtn:hover {
-                transform: scale(1.1);
+                .form-group textarea {
+                    width: 100%;
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    resize: none;
+                    height: 10vh;
+                    color: #fff;
+                    border: 1px solid #414141;
+                    background-color: transparent;
+                    font-family: inherit;
+                }
+
+                .form-group input:focus {
+                    outline: none;
+                    border-color: #e81cff;
+                }
+
+                .form-group textarea:focus {
+                    outline: none;
+                    border-color: #e81cff;
+                }
+
+                .submitBtn {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    align-self: flex-start;
+                    font-family: inherit;
+                    color: #717171;
+                    font-weight: 600;
+                    width: 40%;
+                    background: #313131;
+                    border: 1px solid #414141;
+                    padding: 12px 16px;
+                    font-size: inherit;
+                    gap: 8px;
+                    cursor: pointer;
+                    border-radius: 6px;
+                }
+
+                .submitBtn:hover {
+                    background-color: #fff;
+                    border-color: #fff;
+                }
             }
         }
 
@@ -330,6 +404,21 @@
             padding: 2vh;
 
         }
+
+        .specialties {
+
+            .sectionSpecialties {
+
+                .specialtie {
+                    width: 23vw;
+
+
+                    .specialtie-title {
+                        width: 23vw;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -354,28 +443,23 @@
                     margin-top: 3vh;
                 }
 
-                .socialIcons{
+                .socialIcons {
                     width: 75vw;
                 }
             }
 
-            .photo{
+            .photo {
                 height: 70vh;
-                .myPhoto{
+
+                .myPhoto {
                     height: 90%;
                 }
             }
         }
 
         .specialties {
-            .sectionSpecialties {
-                font-size: 2.5rem;
-
-                .specialtie {
-                    p {
-                        font-size: 1rem;
-                    }
-                }
+            .section-title {
+                font-size: 3rem;
             }
         }
 
@@ -410,7 +494,7 @@
                     font-size: 1rem;
                 }
 
-                .socialIcons{
+                .socialIcons {
                     width: 80vw;
                 }
             }
@@ -429,11 +513,7 @@
             .sectionSpecialties {
                 font-size: 2rem;
 
-                .specialtie {
-                    p {
-                        font-size: 1rem;
-                    }
-                }
+
             }
         }
 
@@ -486,14 +566,14 @@
                     font-size: 3rem; ///
                 }
 
-                .socialIcons{
+                .socialIcons {
                     width: 80vw;
                 }
             }
 
             .photo {
                 height: 68vh;
-                
+
                 .myPhoto {
                     height: 80%;
                 }
@@ -538,7 +618,7 @@
                 .title {
                     font-size: 2rem; ///
                 }
-                
+
             }
 
             .photo {
@@ -551,10 +631,20 @@
         }
 
         .specialties {
+            .section-title {
+                font-size: 2.5rem;
+            }
+
             .sectionSpecialties {
+
                 .specialtie {
-                    width: 40vw;
-                    font-size: 1.5rem;
+                    width: 33vw;
+
+
+                    .specialtie-title {
+                        font-size: 1rem;
+                        width: 33vw;
+                    }
                 }
             }
         }
@@ -589,7 +679,7 @@
         }
 
         .contact {
-            height: 80vh;
+            height: 85vh;
 
             .sectionContact {
                 width: 80vw;
@@ -598,23 +688,6 @@
 
             .sectionForm {
                 width: 80vw;
-                justify-content: flex-start;
-
-                .form {
-                    margin-left: 0;
-                    margin-top: 2vh;
-
-                    textarea {
-                        width: 90%;
-                    }
-
-
-                }
-
-                .submitBtn {
-                    margin-top: 3vh;
-                }
-
             }
 
             .socialMedia {
@@ -644,10 +717,11 @@
                 }
 
                 .socialIcons {
-                    
-                    .btn{
+
+                    .btn {
                         font-size: 0.8rem;
                     }
+
                     .iconLink {
                         .icon {
                             height: 3vh;
@@ -659,7 +733,8 @@
             }
 
             .photo {
-                    margin-bottom: 7vh;
+                margin-bottom: 7vh;
+
                 .myPhoto {
                     height: 90%;
                 }
@@ -667,18 +742,10 @@
         }
 
         .specialties {
-            .sectionSpecialties {
-                .specialtie {
-                    width: 40vw;
-                    font-size: 1.2rem;
-
-                    p {
-                        font-size: 0.9rem;
-                    }
-                }
+            .section-title {
+                font-size: 2rem;
             }
         }
-
 
 
         .projects {
@@ -718,21 +785,44 @@
             }
         }
 
-        .contact{
-            .sectionContact{
+        .contact {
+            .sectionContact {
                 font-size: 2rem;
 
-                p{
+                p {
                     font-size: 0.9rem;
                 }
             }
-            .socialMedia{
-                span{
-                    img{
+
+            .socialMedia {
+                span {
+                    img {
                         height: 3vh;
                     }
                 }
             }
         }
     }
+}
+
+@media screen and (max-width: 370px) {
+    .container {
+        .specialties {
+
+            .sectionSpecialties {
+
+                .specialtie {
+                    width: 60vw;
+
+
+                    .specialtie-title {
+                        width: 60vw;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+        }
+    }
+
+
 }

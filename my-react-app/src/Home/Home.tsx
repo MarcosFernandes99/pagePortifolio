@@ -7,6 +7,7 @@ import gmail from "../Assets/gmail.png"
 import expenseChart from "../Assets/expenseChart.svg.png"
 import todoList from "../Assets/todoList.svg.png"
 import weatherApp from "../Assets/weatherApp.svg.png"
+import telaLogin from "../Assets/telaLogin.png"
 import Swal from "sweetalert2"
 import { useState } from "react"
 
@@ -14,17 +15,20 @@ export const Home = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [phone, setPhone] = useState('')
-
-
+  
   const scrollForm = () => {
     const form: any = document.getElementById("meuForm");
     form.scrollIntoView({ behavior: "smooth" })
   }
 
+  const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    sendMessage();
+  };
+
   const sendMessage = async () => {    
 
-    if (!name || !email || !phone || !message) {
+    if (!name || !email || !message) {
       // Verificar se todos os campos estão preenchidos antes de continuar
       Swal.fire(
         'Por favor, preencha todos os campos do formulário!',
@@ -36,10 +40,9 @@ export const Home = () => {
     const data = {
       name,
       email,
-      phone,
       message
     };
-
+    
     try {
       const response = await fetch('https://api.sheetmonkey.io/form/m3aA2Lb3NnSLS9toTDzdoi', {
         method: "post",
@@ -59,8 +62,7 @@ export const Home = () => {
         // Limpar os campos após o envio bem-sucedido
         setName('')
         setEmail('')
-        setMessage('')
-        setPhone('')
+        setMessage('')        
 
       } else {
         throw new Error('Erro ao enviar mensagem');
@@ -75,7 +77,7 @@ export const Home = () => {
   }
 
   // Função para verificar se um elemento está na visualização
-  function isElementInViewport(element:any) {
+  function isElementInViewport(element: any) {
     const rect = element.getBoundingClientRect();
     return (
       rect.top >= 0 &&
@@ -90,20 +92,20 @@ export const Home = () => {
     const section = document.getElementById(sectionId);
 
     if (section && isElementInViewport(section)) {
-      section.classList.add("visible");      
+      section.classList.add("visible");
     }
   }
 
   function handleProjectVisibility() {
     const projectElements = document.querySelectorAll(".project");
-  
+
     projectElements.forEach((element) => {
       if (isElementInViewport(element)) {
         element.classList.add("visible");
       }
     });
   }
-
+  
   // Adicione um ouvinte de evento de rolagem para chamar handleSectionVisibility quando o usuário rolar a página
   window.addEventListener("scroll", () => {
     handleSectionVisibility("specialties");
@@ -119,7 +121,7 @@ export const Home = () => {
             <p>Marcos Fernandes</p>
           </div>
           <div className="headline">
-            <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, HTML, CSS, SASS e APis.
+            <p>Sou desenvolvedor front end, com sólidos conhecimentos em  JavaScript, React, Next.JS, HTML, CSS, e APis.
               Atualmente atuo como freelancer desenvolvendo interfaces para sites e aplicativos, com habilidade em implementar soluções modernas
               e atraentes oferecendo assim a melhor experiência possível para o usuário.</p>
           </div>
@@ -137,7 +139,7 @@ export const Home = () => {
               <img className="icon" src={gmail} alt="Email" />
             </a></span>
             <button className="btn" onClick={scrollForm}>CONTATE-ME</button>
-          </div>       
+          </div>
         </div>
 
         <div className="photo">
@@ -146,13 +148,71 @@ export const Home = () => {
       </section>
 
       <section className="specialties" id="specialties">
+        <div className="section-title">
+          <span>Habilidades</span>
+        </div>
         <div className="sectionSpecialties">
-          <span className="specialtie">HTML <p>1 ano de experiência</p></span>
-          <span className="specialtie">Javascript <p>1 ano de experiência</p></span>
-          <span className="specialtie">CSS <p>1 ano de experiência</p></span>
-          <span className="specialtie">React <p>6 meses de experiência</p></span>
-          <span className="specialtie">Sass <p>6 meses de experiência</p></span>
-          <span className="specialtie">API <p>6 meses de experiência</p></span>
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>HTML</span>
+              <span className="progress-label">100%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress"></div>
+            </div>
+          </div>
+
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>Javascript</span>
+              <span className="progress-label">75%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '75%' }}></div>
+            </div>
+          </div>
+
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>CSS</span>
+              <span className="progress-label">80%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '80%' }}></div>
+            </div>
+          </div>
+
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>React</span>
+              <span className="progress-label">90%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '90%' }}></div>
+            </div>
+          </div>
+
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>Next.JS</span>
+              <span className="progress-label">85%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '85%' }}></div>
+            </div>
+          </div>
+
+          <div className="specialtie">
+            <div className="specialtie-title">
+              <span>API</span>
+              <span className="progress-label">90%</span>
+            </div>
+            <div className="progress-bar">
+              <div className="progress" style={{ width: '90%' }}></div>
+            </div>
+          </div>
+
+
         </div>
       </section>
 
@@ -186,6 +246,14 @@ export const Home = () => {
             <p className="nameProjects">WEATHER APP</p>
             <p className="technologies">HTML CSS JAVASCRIPT API</p>
           </div>
+
+          <div className="project">
+            <a href="https://register-login-teal.vercel.app/" target="_blank">
+              <img src={telaLogin} alt="TelaLogin" />
+            </a>
+            <p className="nameProjects">REGISTER E LOGIN</p>
+            <p className="technologies">REACT NEXT.JS TYPESCRIPT TAILWIND CSS</p>
+          </div>
         </div>
       </section>
 
@@ -194,13 +262,19 @@ export const Home = () => {
           Por favor preencha o formulário, e eu entro em contato o mais breve possível. Até logo!</p>
         </div>
         <div className="sectionForm">
-          <form id="meuForm" className="form" action="Submit">
-            <textarea onChange={(e) => setName(e.target.value)} value={name} id="nome" placeholder="Nome" />
-            <textarea onChange={(e) => setEmail(e.target.value)} value={email} id="email" placeholder="Email" />
-            <textarea onChange={(e) => setPhone(e.target.value)} value={phone} id="telefone" placeholder="Telefone" />
-            <textarea onChange={(e) => setMessage(e.target.value)} value={message} id="msg" className="msg" placeholder="Mensagem" />
+          <form id="meuForm" className="form" onSubmit={sendMessage}>
+            <div className="form-group">
+              <label htmlFor="email">Nome</label>
+              <input onChange={(e) => setName(e.target.value)} value={name} type="text" id="nome" name="nome" />
+              <label htmlFor="email">Email</label>
+              <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" id="email" name="email" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="textarea">Mensagem</label>
+              <textarea onChange={(e) => setMessage(e.target.value)} value={message} name="textarea" id="textarea" rows={10} cols={50}></textarea>
+            </div>
+            <button className="submitBtn" type="submit" onClick={handleButtonClick}>ENVIAR MENSAGEM</button>
           </form>
-          <button className="submitBtn" type="submit" onClick={sendMessage}>ENVIAR MENSAGEM</button>
         </div>
         <div className="socialMedia">
           <span className="icon"><a href="https://github.com/MarcosFernandes99" target="_blank"><img src={github} alt="Github" /></a></span>
