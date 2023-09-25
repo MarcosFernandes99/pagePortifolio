@@ -1,5 +1,5 @@
 import "./style.scss"
-import fotoPerfil from "../Assets/fotoPerfil.png"
+import fotoperfil from "../Assets/fotoPerfil.png"
 import github from "../Assets/github.svg.png"
 import linkedin from "../Assets/linkedin.svg.png"
 import insta from "../Assets/instagram.png"
@@ -146,7 +146,7 @@ export const Home = () => {
           </div>
         </div>
         <div className="photo">
-          <img className="myPhoto" src={fotoPerfil} alt="Photo" />
+          <img className="myPhoto" src={fotoperfil} alt="Photo" />
         </div>
       </section>
 
