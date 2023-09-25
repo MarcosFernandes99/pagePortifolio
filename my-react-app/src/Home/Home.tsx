@@ -4,7 +4,6 @@ import github from "../Assets/github.svg.png"
 import linkedin from "../Assets/linkedin.svg.png"
 import insta from "../Assets/instagram.png"
 import gmail from "../Assets/gmail.png"
-import expenseChart from "../Assets/expenseChart.svg.png"
 import todoList from "../Assets/todoList.svg.png"
 import weatherApp from "../Assets/weatherApp.svg.png"
 import telaLogin from "../Assets/telaLogin.png"
@@ -197,23 +196,15 @@ export const Home = () => {
               <img src={todoList} alt="TodoList" />
             </a>
             <p className="nameProjects">TODO LIST</p>
-            <p className="technologies">HTML CSS JAVASCRIPT</p>
-          </div>
-
-          <div className="project">
-            <a href="https://expense-chart-9d8713.netlify.app" target="_blank">
-              <img src={expenseChart} alt="ExpenseChart" />
-            </a>
-            <p className="nameProjects">EXPENSES CHART</p>
-            <p className="technologies">HTML CSS JAVASCRIPT</p>
-          </div>
+            <p className="technologies">REACT TYPESCRIPT SASS</p>
+          </div>    
 
           <div className="project">
             <a href="https://weatther-app-20he.netlify.app" target="_blank">
               <img src={weatherApp} alt="WeatherApp" />
             </a>
             <p className="nameProjects">WEATHER APP</p>
-            <p className="technologies">HTML CSS JAVASCRIPT API</p>
+            <p className="technologies">REACT TYPESCRIPT CSS API</p>
           </div>
 
           <div className="project">

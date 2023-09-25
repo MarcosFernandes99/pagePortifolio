@@ -35,12 +35,14 @@
         display: flex;
         width: 80vw;
         height: 95vh;
+        
 
         .text {
             display: flex;
             flex-direction: column;
             justify-content: center;
             width: 50%;
+            
 
             .title {
                 font-size: 3.5rem;
@@ -818,14 +820,9 @@
                 width: 80vw;
                 display: flex;
                 justify-content: end;
+                margin-top: 2vh;
 
-                .divButton .buttonMenu{
-                    transition: transform .3s;
-                }
-
-                .divButton .buttonMenu:hover{
-                    transform: scale(1.2);
-                }
+              
             }
 
             .menu {

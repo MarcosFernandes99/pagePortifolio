@@ -7,7 +7,7 @@ import iconMenu from "../Assets/iconMenu.png"
 interface menuSelectedProps {
   onClick: (e: any) => void
 }
-const MenuSelected: React.FC<menuSelectedProps> = ({onClick}) => {
+const MenuSelected: React.FC<menuSelectedProps> = ({ onClick }) => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -28,7 +28,8 @@ const MenuSelected: React.FC<menuSelectedProps> = ({onClick}) => {
         onClick={handleClick}
 
       >
-        <img src={iconMenu} alt="IconMenu" height="50" />
+        <img src={iconMenu} alt="IconMenu" height="60" />
+
       </Button>
       <Menu
         id="basic-menu"
