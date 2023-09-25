@@ -122,7 +122,7 @@ export const Home = () => {
     <main className="container">
       <section className="nav-bar">
         <div className="hamburger-menu" id="hamburger-menu">
-         
+
         </div>
         <div className="menu">
           <span onClick={() => scrollSection("projects")}>Projetos</span>
@@ -171,70 +171,16 @@ export const Home = () => {
 
       <section className="specialties" id="specialties">
         <div className="section-title">
-          <span>Habilidades</span>
+          <span>Tecnologias que atuo</span>
         </div>
         <div className="sectionSpecialties">
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>HTML</span>
-              <span className="progress-label">100%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress"></div>
-            </div>
-          </div>
-
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>Javascript</span>
-              <span className="progress-label">75%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: '75%' }}></div>
-            </div>
-          </div>
-
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>CSS</span>
-              <span className="progress-label">80%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: '80%' }}></div>
-            </div>
-          </div>
-
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>React</span>
-              <span className="progress-label">90%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: '90%' }}></div>
-            </div>
-          </div>
-
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>Next.JS</span>
-              <span className="progress-label">85%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: '85%' }}></div>
-            </div>
-          </div>
-
-          <div className="specialtie">
-            <div className="specialtie-title">
-              <span>API</span>
-              <span className="progress-label">90%</span>
-            </div>
-            <div className="progress-bar">
-              <div className="progress" style={{ width: '90%' }}></div>
-            </div>
-          </div>
-
-
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-line.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" />
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" />
         </div>
       </section>
 
@@ -274,7 +220,7 @@ export const Home = () => {
               <img src={telaLogin} alt="TelaLogin" />
             </a>
             <p className="nameProjects">REGISTER E LOGIN</p>
-            <p className="technologies">REACT NEXT.JS TYPESCRIPT TAILWIND CSS</p>
+            <p className="technologies">REACT NEXT.JS TYPESCRIPT TAILWIND</p>
           </div>
         </div>
       </section>
