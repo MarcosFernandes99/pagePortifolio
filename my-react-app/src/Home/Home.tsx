@@ -11,6 +11,7 @@ import telaLogin from "../Assets/telaLogin.png"
 import avatar from "../Assets/pngegg.png"
 import Swal from "sweetalert2"
 import { useState } from "react"
+import MenuSelected from "../Components/MenuSelected"
 
 export const Home = () => {
   const [name, setName] = useState('')
@@ -121,8 +122,8 @@ export const Home = () => {
   return (
     <main className="container">
       <section className="nav-bar">
-        <div className="hamburger-menu" id="hamburger-menu">
-
+        <div className="hamburguer-menu" id="hamburger-menu">
+          <MenuSelected onClick={scrollSection}/>
         </div>
         <div className="menu">
           <span onClick={() => scrollSection("projects")}>Projetos</span>

@@ -8,11 +8,15 @@
     .nav-bar {
         margin-bottom: 5vh;
 
+        .hamburguer-menu {
+            display: none;
+        }
+
         .menu {
             display: flex;
             width: 80vw;
             justify-content: flex-end;
-            gap: 5vw;
+            gap: 8vw;
             margin-top: 2vh;
 
             span {
@@ -103,7 +107,7 @@
         position: relative;
         border-top: solid 0.1vh;
         opacity: 0;
-        transform: translateX(50px);
+        transform: translateX(20px);
         transition: opacity 0.1s, transform 0.5s;
 
         h2 {
@@ -303,10 +307,10 @@
         justify-content: center;
         margin-top: 5vh;
         background-color: var(--LightSlateGray);
-        opacity: 0;        
-        transition: opacity 0.5s, transform 0.5s;        
+        opacity: 0;
+        transition: opacity 0.5s, transform 0.5s;
         transform: translateX(10px);
-        
+
 
         .sectionContact {
             display: flex;
@@ -613,7 +617,6 @@
     .container {
         .apresentation {
             width: 80vw;
-            margin-top: 8vh;
 
             .text {
 
@@ -778,20 +781,6 @@
     }
 }
 
-@media screen and (max-width: 440px) {
-    .container{
-        .specialties{
-            .sectionSpecialties img{
-                margin-top: 2vh;
-            }
-        }
-
-        .projects{
-            margin-top: 10vh;
-        }
-    }
-}
-
 @media screen and (max-width: 580px) {
     .container {
 
@@ -823,6 +812,27 @@
 
 @media screen and (max-width: 500px) {
     .container {
+
+        .nav-bar {
+            .hamburguer-menu{
+                width: 80vw;
+                display: flex;
+                justify-content: end;
+
+                .divButton .buttonMenu{
+                    transition: transform .3s;
+                }
+
+                .divButton .buttonMenu:hover{
+                    transform: scale(1.2);
+                }
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+
         .apresentation {
 
             .text {
@@ -843,8 +853,6 @@
                         }
                     }
                 }
-
-
             }
 
             .photo {
@@ -919,22 +927,31 @@
     }
 }
 
+@media screen and (max-width: 440px) {
+    .container {
+        .specialties {
+            .sectionSpecialties img {
+                margin-top: 2vh;
+            }
+        }
+
+        .projects {
+            margin-top: 10vh;
+        }
+    }
+}
+
 @media screen and (max-width: 375px) {
     .container {
-
-        .apresentation {
-            height: 85vh;
-
-        }
 
         .specialties {
             .section-title {
                 font-size: 2rem;
             }
-           
+
         }
 
-        .projects{
+        .projects {
             margin-top: 17vh;
         }
 
@@ -942,14 +959,14 @@
 }
 
 @media screen and (max-width: 320px) {
-    .container{
-        .specialties{
-            .sectionSpecialties img{
+    .container {
+        .specialties {
+            .sectionSpecialties img {
                 margin-top: 2vh;
             }
         }
 
-        .projects{
+        .projects {
             margin-top: 25vh;
         }
     }
