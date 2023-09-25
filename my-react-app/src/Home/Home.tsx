@@ -1,5 +1,5 @@
 import "./style.scss"
-import fotoperfil from "../Assets/fotoPerfil.png"
+import fotoperfil from "../Assets/fotoperfil.png"
 import github from "../Assets/github.svg.png"
 import linkedin from "../Assets/linkedin.svg.png"
 import insta from "../Assets/instagram.png"
