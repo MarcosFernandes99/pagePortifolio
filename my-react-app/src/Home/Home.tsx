@@ -114,7 +114,6 @@ export const Home = () => {
   window.addEventListener("scroll", () => {
     handleSectionVisibility("specialties");
     handleProjectVisibility();
-    handleSectionVisibility("contact");
     handleSectionVisibility("about");
   });
 
