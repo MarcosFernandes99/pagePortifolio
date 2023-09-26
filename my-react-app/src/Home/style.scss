@@ -311,7 +311,7 @@
         background-color: var(--LightSlateGray);
         opacity: 0;
         transition: opacity 0.5s, transform 0.5s;
-        transform: translateX(5px);
+        transform: translateY(-10px);
 
 
         .sectionContact {
@@ -914,7 +914,7 @@
 
         .contact {
             .sectionContact {
-                font-size: 2rem;
+                font-size: 3rem;
 
                 p {
                     font-size: 0.9rem;
