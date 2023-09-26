@@ -138,7 +138,7 @@ export const Home = () => {
           <div className="headline">
             <p>Sou um Desenvolvedor Front-end e minha especialização está em criar portais, websites e landing pages de alto desempenho.</p>
             <p>Meu objetivo é desenvolver projetos modernos e eficientes. Se você está em busca de um Desenvolvedor Front-end ágil e comprometido
-              em criar solucões personalizadas, você encontrou o profissional certo!
+              em criar soluções personalizadas, você encontrou o profissional certo!
             </p>
           </div>
           <div className="socialIcons">
