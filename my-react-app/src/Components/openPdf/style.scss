@@ -1,0 +1,27 @@
+.pdf{
+    display: flex;
+    width: 80vw;
+    text-align: left;
+
+    button{
+        height: 8vh;
+        background-color: #00BFFF;
+        border-radius: 5vh;
+        color: white;
+        font-weight: 700;
+        font-size: 3vh;
+        cursor: pointer;
+        box-shadow: 0 0 40px #00BFFF;
+        padding: 2vh;
+
+        img{
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    button:hover{
+        background-color: #1E90FF;
+        transition-duration: 0.3s;
+    }
+}

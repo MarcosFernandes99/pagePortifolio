@@ -13,6 +13,7 @@ import { useEffect, useState } from "react"
 import MenuSelected from "../Components/MenuSelected"
 import Loading from "../Components/loading/Loading"
 import scrollSection from "../utils/functionScrollSection"
+import MyPDF from "../Components/openPdf/MyPdf"
 
 export const Home = () => {
   const [name, setName] = useState('')
@@ -135,6 +136,7 @@ export const Home = () => {
               <span onClick={() => scrollSection("contact")}>Fale comigo</span>
             </div>
           </section>
+          <MyPDF/>
           <section className="apresentation">
             <div className="text">
               <div className="title">
