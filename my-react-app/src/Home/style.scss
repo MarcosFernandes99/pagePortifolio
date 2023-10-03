@@ -760,6 +760,7 @@
 
             .sectionForm {
                 width: 80vw;
+                margin-left: 0vw;
             }
 
             .socialMedia {
@@ -822,6 +823,18 @@
 
             .menu {
                 display: none;
+            }
+        }
+
+        .pdf{
+            button{
+                font-size: 1.2rem;
+                height: 10vh;
+                width: 5rem;
+                img{
+                    height: 50%;
+                }
+                
             }
         }
 

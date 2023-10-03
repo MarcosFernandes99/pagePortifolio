@@ -17,7 +17,7 @@ import MyPDF from "../Components/openPdf/MyPdf"
 
 export const Home = () => {
   const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
   const [message, setMessage] = useState('')
   const [isLoading, setIsLoading] = useState(true);
 
@@ -28,7 +28,7 @@ export const Home = () => {
 
   const sendMessage = async () => {
 
-    if (!name || !email || !message) {
+    if (!name || !phone || !message) {
       // Verificar se todos os campos estão preenchidos antes de continuar
       Swal.fire(
         'Por favor, preencha todos os campos do formulário!',
@@ -39,7 +39,7 @@ export const Home = () => {
     }
     const data = {
       name,
-      email,
+      phone,
       message
     };
 
@@ -61,7 +61,7 @@ export const Home = () => {
         );
         // Limpar os campos após o envio bem-sucedido
         setName('')
-        setEmail('')
+        setPhone('')
         setMessage('')
 
       } else {
@@ -153,7 +153,7 @@ export const Home = () => {
               </div>
             </div>
             <div className="photo">
-              <img className="myPhoto" src={fotoperfil} alt="Photo" />
+              <img className="myPhoto" src={fotoperfil} alt="Photo" loading="lazy"/>
             </div>
           </section>
 
@@ -225,16 +225,17 @@ export const Home = () => {
           </section>
 
           <section className="contact" id="contact">
-            <div className="sectionContact">Contato <p>Eu adoraria ouvir sobre seu projeto e como eu poderia ajudar.
-              Por favor preencha o formulário, e eu entro em contato o mais breve possível. Até logo!</p>
+            <div className="sectionContact">Contato <p>Espero que tenha gostado do meu portifólio. Caso queira entrar em contato, deixe
+              seus dados neste formulário que entro em contato o mais breve possível. Até logo!
+            </p>
             </div>
             <div className="sectionForm">
               <form id="meuForm" className="form" onSubmit={sendMessage}>
                 <div className="form-group">
-                  <label htmlFor="email">Nome</label>
+                  <label htmlFor="name">Nome</label>
                   <input onChange={(e) => setName(e.target.value)} value={name} type="text" id="nome" name="nome" />
-                  <label htmlFor="email">Email</label>
-                  <input onChange={(e) => setEmail(e.target.value)} value={email} type="text" id="email" name="email" />
+                  <label htmlFor="phone">Telefone</label>
+                  <input onChange={(e) => setPhone(e.target.value)} value={phone} type="text" id="email" name="email" />
                 </div>
                 <div className="form-group">
                   <label htmlFor="textarea">Mensagem</label>

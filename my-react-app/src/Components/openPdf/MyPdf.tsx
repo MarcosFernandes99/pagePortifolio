@@ -9,9 +9,13 @@ const MyPDF = () => {
   };
 
   return (
-    <div className="pdf">
-      <button onClick={openPdf}><img src={iconarquivo} alt="Arquivo" /></button>
-    </div>
+    <>      
+      <div className="pdf">
+        <button onClick={openPdf}>PDF
+          <img src={iconarquivo} alt="Arquivo" loading="lazy" />
+        </button>
+      </div>
+    </>
   );
 };
 
