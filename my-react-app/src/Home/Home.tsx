@@ -8,6 +8,7 @@ import todoList from "../Assets/todoList.svg.png"
 import weatherApp from "../Assets/weatherApp.svg.png"
 import telaLogin from "../Assets/telaLogin.png"
 import avatar from "../Assets/pngegg.png"
+import mafgrifes from "../Assets/MAF - Grifes.png"
 import Swal from "sweetalert2"
 import { useEffect, useState } from "react"
 import MenuSelected from "../Components/MenuSelected"
@@ -219,6 +220,14 @@ export const Home = () => {
                   <img src={telaLogin} alt="TelaLogin" />
                 </a>
                 <p className="nameProjects">REGISTER E LOGIN</p>
+                <p className="technologies">REACT NEXT.JS TYPESCRIPT TAILWIND</p>
+              </div>
+
+              <div className="project">
+                <a href="https://mafgrifes.vercel.app/" target="_blank">
+                  <img src={mafgrifes} alt="MAF - Grifes" />
+                </a>
+                <p className="nameProjects">Social-Linking</p>
                 <p className="technologies">REACT NEXT.JS TYPESCRIPT TAILWIND</p>
               </div>
             </div>
